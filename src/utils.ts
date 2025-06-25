@@ -2,6 +2,7 @@ import fs from 'fs-extra';
 import cliProgress from 'cli-progress';
 import { execSync } from 'child_process';
 import { pkg } from './constants';
+import path from 'path';
 
 async function getDependencyVersions(dependencies: string[], version: string) {
     const bar = new cliProgress.SingleBar({
@@ -59,7 +60,7 @@ async function getDependencyVersions(dependencies: string[], version: string) {
 }
 
 export const getJsonFile = {
-    manifest: () => fs.readJSON("manifest.json"),
+    manifest: () => fs.readJSON(path.join("behavior", "manifest.json")),
     tsconfig: () => fs.readJSON("tsconfig.json"),
     package: () => fs.readJSON("package.json")
 }

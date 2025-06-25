@@ -62,6 +62,7 @@ coverage/
 
 # npm
 package-lock.json
+tsconfig.tsbuildinfo
 
 # GitHub
 .github/

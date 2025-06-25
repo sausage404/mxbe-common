@@ -1,6 +1,6 @@
 {
   "name": "@mxbe/common",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Shared utilities and types used across the @mxbe/* ecosystem.",
   "private": false,
   "main": "dist/index.js",
