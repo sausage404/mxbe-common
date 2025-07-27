@@ -41,7 +41,7 @@ async function getDependencyVersions(dependencies: string[], version: string) {
                         ? true
                         : v.includes('preview');
             } else if (isModule) {
-                return isStable ? v.includes('stable') : v.includes('preview');
+                return isStable ? (v.includes('stable') || v.split('.').length === 3) : v.includes('preview');
             }
             return true;
         }).sort((a, b) => b.localeCompare(a, undefined, { numeric: true, sensitivity: 'base' }));
